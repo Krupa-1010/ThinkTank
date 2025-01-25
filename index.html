@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ThinkTank</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url(background.jpeg) no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: flex-end;
+            padding: 30px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: 2px solid rgba(255,255,255,0.5);
+            border-radius: 50px;
+            background: transparent;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            background: rgba(255,255,255,0.2);
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 70vh;
+        }
+
+        .logo {
+            font-size: 6rem;
+            background: linear-gradient(to right, #4ecdc4, #45aaf2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05) rotate(3deg);
+        }
+
+        .tagline {
+            max-width: 700px;
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            color: #e0e0e0;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .feature-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            width: 250px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .feature-card .icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #4ecdc4, #45aaf2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: #e0e0e0;
+        }
+
+        .cta-button {
+            background: linear-gradient(to right, #4ecdc4, #45aaf2);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-buttons">
+            <button class="btn">Login</button>
+            <button class="btn">Sign Up</button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <h1 class="logo">ThinkTank</h1>
+        <p class="tagline">Transform Global Learning. Connect, Collaborate, Achieve.</p>
+        
+        <div class="features">
+            <div class="feature-card">
+                <div class="icon"><i class="fas fa-book"></i></div>
+                <h3>Shared Knowledge</h3>
+                <p>Collaborative learning platform</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon"><i class="fas fa-globe"></i></div>
+                <h3>Global Study Rooms</h3>
+                <p>Connect with learners worldwide</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon"><i class="fas fa-chalkboard"></i></div>
+                <h3>Interactive Whiteboard</h3>
+                <p>Real-time collaborative workspace</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon"><i class="fas fa-bullseye"></i></div>
+                <h3>Goal Tracking</h3>
+                <p>Monitor and achieve your objectives</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon"><i class="fas fa-users"></i></div>
+                <h3>Collaborative Learning</h3>
+                <p>Learn together, grow together</p>
+            </div>
+        </div>
+
+        <button class="cta-button">Join ThinkTank Now</button>
+    </main>
+    <script src="https://download.agora.io/sdk/release/AgoraRTC_N-4.17.0.js"></script> 
+    <script src="script.js"></script>
+</body>
+</html>
