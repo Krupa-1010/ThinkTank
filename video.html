@@ -1,28 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>ThinkTank Study Space</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='video.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="video.css">
 </head>
 <body>
 
-    <button id="join-btn">Join Stream</button>
+    <div id="create-room-section">
+        <h3>Create Room</h3>
+        <button id="create-room-btn">Create Room</button>
+        <p id="room-id-display"></p>
+    </div>
+    
+    <div id="join-room-section">
+        <label for="room-code-input">Enter Room Code:</label>
+        <input type="text" id="room-code-input" placeholder="Enter Room Code" />
+        <button id="join-btn">Join Stream</button>
+    </div>
+    
 
     <div id="stream-wrapper">
         <div id="video-streams"></div>
 
+        <!-- Pomodoro Timer Section -->
+        <div id="pomodoro-timer">
+            <h3>Pomodoro Timer</h3>
+            <div id="timer">25:00</div>
+            <div>
+                <button id="start-btn">Start</button>
+                <button id="pause-btn" disabled>Pause</button>
+                <button id="reset-btn">Reset</button>
+            </div>
+            <p id="message"></p>
+        </div>
+
         <div id="stream-controls">
             <button id="leave-btn">Leave Stream</button>
             <button id="mic-btn">Mic On</button>
-            <button id="camera-btn">Camera on</button>
+            <button id="camera-btn">Camera On</button>
         </div>
     </div>
     
 </body>
-<!-- <script src="https://download.agora.io/sdk/release/AgoraRTC_N.js"></script> -->
 <script src="AgoraRTC_N-4.23.0.js"></script>
-<script src='video.js'></script>
+<script type="module" src="firebase_config.js"></script>
+<script src="video.js"></script>
+<script type="module" src="timer.js"></script>
+
+<script>
+    // DOM elements
+const createRoomSection = document.getElementById("create-room-section");
+const joinRoomSection = document.getElementById("join-room-section");
+const streamWrapper = document.getElementById("stream-wrapper");
+
+// Function to hide Create and Join sections after joining/creating a room
+function hideRoomOptions() {
+  createRoomSection.classList.add("hidden");
+  joinRoomSection.classList.add("hidden");
+  streamWrapper.classList.remove("hidden"); // Show the stream wrapper if hidden
+}
+
+// Create Room button functionality
+document.getElementById("create-room-btn").addEventListener("click", async () => {
+  // Code for creating a room (e.g., Firebase logic)
+  console.log("Room created");
+
+  // Hide the Create/Join sections after creating the room
+  hideRoomOptions();
+});
+
+// Join Room button functionality
+document.getElementById("join-btn").addEventListener("click", async () => {
+  const roomCode = document.getElementById("room-code-input").value.trim();
+  
+  if (roomCode) {
+    // Code for joining a room (e.g., Firebase logic)
+    console.log(`Joined room with code: ${roomCode}`);
+
+    // Hide the Create/Join sections after joining the room
+    hideRoomOptions();
+  } else {
+    alert("Please enter a valid room code!");
+  }
+});
+
+</script>
 </html>
