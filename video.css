@@ -127,4 +127,32 @@
       align-items: center;
     }
   }
+
+  .video-container {
+    display: flex;
+    height: 100vh;
+}
+
+#video-area {
+    flex-grow: 1;
+    background-color: #000;
+}
+
+.goals-sidebar {
+    width: 300px;
+    background-color: white;
+    border-left: 1px solid #e0e0e0;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.goal-input-section {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+#goalInput {
+    flex-grow: 1;
+    margin-right: 10px;
+}
   

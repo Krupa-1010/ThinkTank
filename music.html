@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Local Music Player</title>
+  <style>
+    /* Basic styling - feel free to customize */
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Choose a Music for concentrated studies</h1>
+    <div class="btn-grp">
+        <audio id="audioPlayer" controls></audio>
+        <button id="playBtn">Play</button>
+        <button id="pauseResumeBtn">Pause</button> 
+        <button id="nextBtn">Next</button>
+        <select id="musicSelect"></select>
+    </div>
+  </div>
+
+  <script src="music.js"></script>
+</body>
+</html>
