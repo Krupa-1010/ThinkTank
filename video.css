@@ -3,6 +3,16 @@
     position: relative;
     z-index: 100; /* Make sure join button stays on top */
 }
+
+.container{
+  margin: 15px;
+  padding: 10px;
+}
+
+.main-head{
+  text-align: center;
+  font-size: 40px;
+}
   
   #stream-wrapper {
     display: flex;
@@ -68,14 +78,16 @@
 }
   
 #pomodoro-timer {
-  width: 300px;
+  width: 350px;
   padding: 10px; /* Reduced padding to decrease the depth */
+  padding-top: 15px;
   background-color: #f9f9f9;
   border: 2px solid #ccc;
   border-radius: 10px;
   text-align: center;
+  margin-bottom: 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  height: 150px; /* Reduced height */
+  height: 200px; /* Reduced height */
 }
   
 #pomodoro-timer h3 {
@@ -139,7 +151,7 @@
 }
 
 .goals-sidebar {
-    width: 300px;
+    width: 350px;
     background-color: white;
     border-left: 1px solid #e0e0e0;
     padding: 15px;
