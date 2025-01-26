@@ -1,17 +1,6 @@
-
 #join-btn {
     position: relative;
     z-index: 100; /* Make sure join button stays on top */
-}
-
-.container{
-  margin: 15px;
-  padding: 10px;
-}
-
-.main-head{
-  text-align: center;
-  font-size: 40px;
 }
   
   #stream-wrapper {
@@ -151,7 +140,7 @@
 }
 
 .goals-sidebar {
-    width: 350px;
+    width: 300px;
     background-color: white;
     border-left: 1px solid #e0e0e0;
     padding: 15px;
