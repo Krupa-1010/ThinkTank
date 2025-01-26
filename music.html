@@ -10,18 +10,44 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      
+    }
+    .btn-grp{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+       
+    }
+    .keys{
+        display:flex;
+        margin:2px;
+        
+    }
+    .btn{
+      background-color: #007bff; /* Primary blue */
+  color: white; /* Text color */
+  border: none;
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease
     }
   </style>
 </head>
 <body>
   <div>
-    
+    <h1>Enjoy Relaxed ThinkTank Beats During Breaks!</h1>
     <div class="btn-grp">
+        <img src="tink.jpg" alt="">
         <audio id="audioPlayer" controls></audio>
-        <button id="playBtn">Play</button>
-        <button id="pauseResumeBtn">Pause</button> 
-        <button id="nextBtn">Next</button>
-        <select id="musicSelect"></select>
+        <div class="keys">
+        <button class="btn" id="playBtn">Play</button>
+        <button class="btn" id="pauseResumeBtn">Pause</button> 
+        <button class="btn"  id="nextBtn">Next</button>
+        <select class="btn"  id="musicSelect"></select>
+
     </div>
   </div>
 
