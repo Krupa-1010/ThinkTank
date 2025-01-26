@@ -1,12 +1,8 @@
 
 #join-btn {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 18px;
-    padding: 20px 40px;
-  }
+    position: relative;
+    z-index: 100; /* Make sure join button stays on top */
+}
   
   #stream-wrapper {
     display: flex;
@@ -15,25 +11,40 @@
     margin: 0 auto;
     width: 90%;
     max-width: 1400px;
-  }
+    position: relative; /* For proper positioning of buttons */
+}
   
-  #video-streams {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    height: 90vh;
-    flex: 1;
-    gap: 10px;
-  }
-  
-  .video-container {
-    max-height: 100%;
-    border: 2px solid black;
-  }
-  
-  .video-player {
-    height: 100%;
-    width: 100%;
-  }
+#video-streams {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Larger square size */
+  gap: 10px;
+  height: 90vh; /* Maintains height */
+  flex: 1;
+}
+
+.video-container {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%; /* Full width of grid cell */
+  aspect-ratio: 1 / 1; /* Ensures a square aspect ratio */
+  overflow: hidden; /* Prevents overflow */
+}
+
+.video-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the square container */
+}
+
+
+
+
   
   button {
     border: none;
@@ -46,26 +57,32 @@
   }
   
   #stream-controls {
-    display: none;
+    display: flex;
     justify-content: center;
     margin-top: 0.5em;
-  }
+    position: absolute;
+    bottom: 20px; /* Align buttons at the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
   
-  #pomodoro-timer {
-    width: 300px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
+#pomodoro-timer {
+  width: 300px;
+  padding: 10px; /* Reduced padding to decrease the depth */
+  background-color: #f9f9f9;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  height: 150px; /* Reduced height */
+}
   
-  #pomodoro-timer h3 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: #333;
-  }
+#pomodoro-timer h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
   
   #timer {
     font-size: 2rem;

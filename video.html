@@ -6,6 +6,7 @@
     <title>ThinkTank Study Space</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="video.css">
+
 </head>
 <body>
 
@@ -24,6 +25,7 @@
 
     <div id="stream-wrapper">
         <div id="video-streams"></div>
+        <iframe id="goals-iframe" src="goals.html" width="100%" height="500px" style="border:none;"></iframe>
 
         <!-- Pomodoro Timer Section -->
         <div id="pomodoro-timer">
@@ -49,43 +51,23 @@
 <script type="module" src="firebase_config.js"></script>
 <script src="video.js"></script>
 <script type="module" src="timer.js"></script>
-
 <script>
-    // DOM elements
-const createRoomSection = document.getElementById("create-room-section");
-const joinRoomSection = document.getElementById("join-room-section");
-const streamWrapper = document.getElementById("stream-wrapper");
+    // Wait for the DOM to load completely
+    document.addEventListener("DOMContentLoaded", () => {
+      // Reference the button and iframe
+      const joinButton = document.getElementById("join-btn");
+      const iframe = document.getElementById("goals-iframe");
 
-// Function to hide Create and Join sections after joining/creating a room
-function hideRoomOptions() {
-  createRoomSection.classList.add("hidden");
-  joinRoomSection.classList.add("hidden");
-  streamWrapper.classList.remove("hidden"); // Show the stream wrapper if hidden
-}
+      // Add a click event listener to the join button
+      joinButton.addEventListener("click", () => {
+        // Show the iframe
+        iframe.style.display = "block";
+        // Hide the join button
+        joinButton.style.display = "none";
+      });
+    });
+  </script>
 
-// Create Room button functionality
-document.getElementById("create-room-btn").addEventListener("click", async () => {
-  // Code for creating a room (e.g., Firebase logic)
-  console.log("Room created");
 
-  // Hide the Create/Join sections after creating the room
-  hideRoomOptions();
-});
-
-// Join Room button functionality
-document.getElementById("join-btn").addEventListener("click", async () => {
-  const roomCode = document.getElementById("room-code-input").value.trim();
-  
-  if (roomCode) {
-    // Code for joining a room (e.g., Firebase logic)
-    console.log(`Joined room with code: ${roomCode}`);
-
-    // Hide the Create/Join sections after joining the room
-    hideRoomOptions();
-  } else {
-    alert("Please enter a valid room code!");
-  }
-});
-
-</script>
+  <script  src="goals.js"></script>
 </html>
