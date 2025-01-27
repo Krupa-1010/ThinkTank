@@ -1,36 +1,62 @@
-# ThinkTank - Virtual Study Room 🧠💻
+# ThinkTank 🎯
 
-**ThinkTank** is your ultimate virtual study platform, designed to bring collaborative and focused study sessions to students and professionals from anywhere in the world. With innovative features like the Pomodoro Technique and calming music, ThinkTank ensures productivity and relaxation go hand in hand. Whether you want to study with friends or focus on self-study, ThinkTank has got you covered!
 
----
+## Basic Details
+### Team Name: CodeCrew
 
-## 🚀 Features
 
-### 📚 **Collaborative Study**
-- Create a **Virtual Room** and share the **unique room ID** with your friends to join.
-- Study together in real-time, no matter where you are in the world.
+### Team Members
+- Member 1: Krupa Anna Kuruvilla - MITS
+- Member 2: Mariat Ignatiouis - MITS
+- Member 3: Archana Jayakumar - MITS
 
-### ⏱️ **Pomodoro Technique**
-- Boost productivity with the scientifically proven Pomodoro Technique.
-- Alternate between focused study sessions and short breaks for better concentration and reduced fatigue.
+### Hosted Project Link
+[Hosted link:](https://thinktank-i6qn.onrender.com/)
 
-### 🎶 **ThinkTank Studio**
-- Relax and unwind with **calming, soothing music** while studying.
-- Choose from a curated selection of tracks to enhance your focus.
+### Project Description
+ThinkTank is a video chat based virtual study room designed to revolutionize the way students and professionals collaborate and focus. With synchronized Pomodoro timers, calming break music, goal tracking, and video chat capabilities, it creates an environment that boosts productivity and concentration.
 
-### 🧘‍♂️ **Self-Study Mode**
-- Use the app for individual study with the integrated Pomodoro timers.
-- Set personal goals and track your study sessions.
+### The Problem statement
+Studying alone or staying focused during group study sessions can often be challenging due to distractions, lack of motivation, and no proper tools to track progress.
 
----
+### The Solution
+ThinkTank offers a seamless platform for synchronized study sessions where group members can track goals, enjoy shared timers, and connect through video. Integrated break-time activities and music ensure a perfect balance of focus and relaxation.
 
-## 🛠️ Tech Stack
+## Technical Details
+### Technologies/Components Used
+For Software:
+- **Languages Used**: JavaScript, HTML, CSS
+- **Libraries Used**: AgoraRTC, Firebase
+- **Tools Used**: Firebase Firestore, GitHub, Figma
 
-- **Frontend**: HTML, CSS, JavaScript  
-- **Backend**: Firebase (for authentication and real-time database)  
-- **Video & Audio**: Agora API (for seamless virtual room communication)  
 
----
+
+### Implementation
+For Software:
+# Installation
+[git clone [repository-link]
+cd ThinkTank
+npm install]
+
+
+
+### Project Documentation
+
+![Home Page](sound/home.png)
+*Home Page -ThinkTank -Virtual study room
+
+![Virtual Room Creator Page](sound/create.png)
+* A sleek and user-friendly interface for joining or creating study rooms.
+
+![Virtual Study Room](sound/space.png)
+* Collaborative study sessions with video streaming with Synchronized Pomorado Timer and Goal setting.
+
+![Think Tank Relaxed Music studio](sound/studio.png)
+*Enjoy relaxed music with ThinkTank studio during breaks
+
+### Project Demo
+# Video
+[Demo video link:](https://www.loom.com/share/50b9bb373a844bee9fabc81e5670ebdc?sid=a18adfdd-5de2-425d-a0f2-f7de1de6f6a5)
 
 ## 🎯 How It Works
 
@@ -48,13 +74,10 @@
 4. **Collaborate & Focus**  
    - Use video and audio features to interact and motivate each other.  
 
----
 
-## 🌟 Why ThinkTank?
-
-- **Boost Productivity**: Stay focused and efficient with the Pomodoro Technique.
-- **Connect Anywhere**: Collaborate with friends no matter where they are in the world.
-- **Relax and Recharge**: Enjoy soothing music to enhance your study sessions.
+## Team Contributions
+- Krupa Anna Kuruvilla: video chat integration, and timer synchronization,Firebase integration.
+- Mariat Ignatious: Goal page,front-end design,home page,music integration
+- Archana Jayakumar:Pomorado Timer,front-end design 
 
 
----
